@@ -1,5 +1,5 @@
 <div class="content">
-  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <form [formGroup]="form">
     <section class="form-section">
       <h1 class="section-title">Travelers</h1>
       <div class="form-container">
@@ -61,14 +61,13 @@
 
             <div class="dropdown-container">
               <label class="dropdown-label">Year of birth</label>
-              <div class="dropdown-field dropdown-disabled">
-                <p-dropdown
+                <!-- <p-select
                   id="yearBirth"
+                  class="dropdown-field"
                   formControlName="yearBirth"
                   [options]="years"
                   placeholder="Select year">
-                </p-dropdown>
-              </div>
+                </p-select> -->
             </div>
           </div>
 
@@ -89,7 +88,7 @@
 
         <div class="action-buttons">
           <button class="btn btn-secondary">Back</button>
-          <button class="btn btn-primary">Confirm</button>
+          <button class="btn btn-primary" (click)="onSubmit()">Confirm</button>
         </div>
       </div>
     </section>

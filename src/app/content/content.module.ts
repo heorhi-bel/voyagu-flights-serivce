@@ -8,7 +8,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [],
-  imports: [SharedModule, CommonModule, FlightsModule, FormsModule, ReactiveFormsModule],
+  imports: [SharedModule, CommonModule, FlightsModule],
   providers: []
 })
 export class ContentModule {}

@@ -18,7 +18,5 @@ export const appConfig: ApplicationConfig = {
       }
   }),
     SharedModule,
-    FormsModule,
-    ReactiveFormsModule
   ]
 };

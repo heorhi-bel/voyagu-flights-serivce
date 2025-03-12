@@ -10,7 +10,7 @@ import { DropdownModule } from 'primeng/dropdown';
 import { BrowserModule } from '@angular/platform-browser';
 
 @NgModule({
-  imports: [SharedModule, BrowserModule, CommonModule, FlightsRoutingModule, FormsModule, ReactiveFormsModule, DropdownModule],
+  imports: [SharedModule, CommonModule, FlightsRoutingModule],
   declarations: [FlightsComponent],
   exports: [FlightsComponent],
   providers: [FlightsService]

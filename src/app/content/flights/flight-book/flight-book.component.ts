@@ -24,5 +24,6 @@ export class FlightBookComponent implements OnInit{
   }
   onSubmit(){
     console.log("Result::", this.form.getRawValue())
+    this.form.markAsChecked();
   }
 }

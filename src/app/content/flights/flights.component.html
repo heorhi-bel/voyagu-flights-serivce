@@ -16,7 +16,6 @@
   
     <div>
       <label>Price Range</label>
-      {{ filters.price | json }}
       ${{ filters.price[0] }} - ${{ filters.price[1] }}
       <p-slider 
         [(ngModel)]="filters.price" 
@@ -25,9 +24,7 @@
         [min]="1"
         [max]="filters.price[1]"
         styleClass="w-56" 
-      />
-      <!-- <input type="range" [(ngModel)]="filters.price.min" [min]="1" [max]="filters.price.max" (change)="displayedFlights$ = getFilteredAndSortedFlights()">
-      <input type="range" [(ngModel)]="filters.price.max" [min]="filters.price.min" [max]="filters.price.max" (change)="displayedFlights$ = getFilteredAndSortedFlights()"> -->
+      /> 
     </div>
   
     <div>
@@ -42,7 +39,7 @@
   </div>
   <div class="flights-list">
     <ng-container *ngFor="let card of (displayedFlights$ | async)">
-      <app-card [data]="card"></app-card> 
+      <app-card [data]="card" ></app-card> 
     </ng-container>
     <button class="show-more-button" *ngIf="(displayedFlights$ | async)?.length < flights?.length" (click)="showMore()">
       Show more
